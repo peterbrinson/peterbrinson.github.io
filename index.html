@@ -4,66 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peter Brinson</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --paper: #faf8f8;
+            --ink: #2b2b2b;
+            --ink-soft: #6b6b6b;
+            --line: #e5e5e5;
+            --accent: #284b63;
+            --accent-soft: #84a59d;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --paper: #161618;
+                --ink: #ebebec;
+                --ink-soft: #9a9a9a;
+                --line: #333136;
+                --accent: #7b97aa;
+                --accent-soft: #84a59d;
+            }
+        }
         body {
-            font-family: 'Meiryo', Arial, sans-serif;
-            max-width: 800px;
+            margin: 0;
+            min-height: 100vh;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: "Atkinson Hyperlegible", -apple-system, "Segoe UI", Meiryo, Arial, sans-serif;
+        }
+        .page {
+            max-width: 480px;
             margin: 0 auto;
-            padding: 20px;
+            min-height: 100vh;
+            padding: 3rem 1.5rem;
+            display: flex;
+            flex-direction: column;
         }
-        .description {
+        .top {
+            flex-shrink: 0;
+        }
+        .spacer {
+            flex: 1;
+        }
+        .name {
             text-align: right;
-            margin-bottom: 30px;
-            color: #666;
+            font-size: 1.05rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.5rem;
+            color: var(--ink-soft);
         }
-        .projects {
-            text-align: left;
+        hr {
+            border: none;
+            border-top: 1px solid var(--line);
+            margin: 0 0 1.6rem;
         }
-        .projects h2 {
-            margin-bottom: 15px;
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.9rem;
+            margin-top: 2rem;
         }
-        .projects ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .projects li {
-            margin-bottom: 10px;
-        }
-        .projects a {
-            color: #0066cc;
+        nav a {
             text-decoration: none;
+            color: var(--ink-soft);
+            font-weight: 700;
+            font-size: 0.95rem;
         }
-        .projects a:hover {
-            text-decoration: underline;
+        nav a:hover {
+            color: var(--accent);
+        }
+        .work {
+            flex-shrink: 0;
+            text-align: right;
+        }
+        .work a {
+            text-decoration: none;
+            color: var(--ink-soft);
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+        .work a:hover {
+            color: var(--accent);
         }
     </style>
 </head>
 <body>
-    <div class="description">
-        <p>Peter Brinson</p>
-    </div>
-
-    <div class="projects">
-        <h3>Projects</h3>
-        <ul>
-            <li><a href="https://modelprofessor.notion.site/">Model Professor, my new film</a></li>
-            <li><a href="http://ic.peterbrinson.com/">Infinite Children, a science fiction audiobook video game in which life extension</a></li>
-            <li><a href="http://thecatandthecoup.com/">The Cat and the Coup, a video game. You play the cat of the first democratically elected PM of Iran</a></li>
-                 <li><a href=" https://rr.peterbrinson.com/">Rehearsals and Returns, a video game about conversations that will never take place</a></li>
-           
-            <li><a href="https://vimeo.com/manage/videos/331723436">Early and Often, an installation encouraging voter registration. In 2020</a></li>
-            <li><a href="https://catsyourvote.myportfolio.com/">Cats Your Vote, a mobile game also about voting</a></li>
-            <br>
-            <li><a href="https://vimeo.com/peterbrinson">...various, as videos. On Vimeo</a></li>
-           
-             
-        </ul>
-        <br>
-           <h3>Teaching</h3>
-        <ul>
-             <li><a href="https://cinema.usc.edu/directories/profile.cfm?id=26212&first=&last=&title=&did=18&referer=%2Finteractive%2Ffaculty.cfm&startpage=1&startrow=1">I teach films and games as a Professor of Practice at USC</a></li>
-            <li><a href="https://www.geidai.ac.jp/english/art/design">I'm also a Visiting Professor at Tokyo University of the Arts</a></li>
-                 </ul>
+    <div class="page">
+        <div class="top">
+            <div class="name">Peter Brinson</div>
+            <nav>
+                <a href="/teach/389">CTIN 389</a>
+                <a href="/teach/534">CTIN 534</a>
+            </nav>
+        </div>
+        <div class="spacer"></div>
+        <div class="work">
+            <a href="work.html">My Work</a>
+        </div>
     </div>
 </body>
 </html>
